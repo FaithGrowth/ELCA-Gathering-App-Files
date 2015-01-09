@@ -1,0 +1,623 @@
+<html lang="en-US">	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Nunito:400,700' rel='stylesheet' type='text/css'>
+		<style type="text/css">
+			<!--
+			/* HTML5 Reset
+			---------------------------------------------------------------------------------------------------- */
+
+			/* Baseline Normalize
+			--------------------------------------------- */
+			/* normalize.css v3.0.1 | MIT License | git.io/normalize */
+
+			html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:0 0}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#222}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+			/* Box Sizing
+			--------------------------------------------- */
+
+			*,
+			input[type="search"] {
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing:    border-box;
+				box-sizing:         border-box;
+			}
+
+			/* Float Clearing
+			--------------------------------------------- */
+
+			.after-entry:before,
+			.author-box:before,
+			.clearfix:before,
+			.entry:before,
+			.entry-content:before,
+			.nav-primary:before,
+			.nav-secondary:before,
+			.pagination:before,
+			.site-container:before,
+			.site-footer:before,
+			.site-header:before,
+			.site-inner:before,
+			.widget:before,
+			.wrap:before {
+				content: " ";
+				display: table;
+			}
+
+			.after-entry:after,
+			.author-box:after,
+			.clearfix:after,
+			.entry:after,
+			.entry-content:after,
+			.nav-primary:after,
+			.nav-secondary:after,
+			.pagination:after,
+			.site-container:after,
+			.site-footer:after,
+			.site-header:after,
+			.site-inner:after,
+			.widget:after,
+			.wrap:after {
+				clear: both;
+				content: " ";
+				display: table;
+			}
+
+
+			/* Defaults
+			---------------------------------------------------------------------------------------------------- */
+
+			/* Typographical Elements
+			--------------------------------------------- */
+
+			body {
+				background-color: #fff;
+				color: #333333;
+				font-family: 'Open Sans', sans-serif;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 1.75;
+				letter-spacing: 0.25;
+				margin: 0;
+				-webkit-font-smoothing: antialiased;
+			}
+
+			a,
+			button,
+			input:focus,
+			input[type="button"],
+			input[type="reset"],
+			input[type="submit"],
+			textarea:focus,
+			.archive .content .entry,
+			.button,
+			.gallery img {
+				-webkit-transition: all 0.2s ease-in-out;
+				-moz-transition:    all 0.2s ease-in-out;
+				-ms-transition:     all 0.2s ease-in-out;
+				-o-transition:      all 0.2s ease-in-out;
+				transition:         all 0.2s ease-in-out;
+			}
+
+			::-moz-selection {
+				background-color: #5161AC;
+				color: #fff;
+			}
+
+			::selection {
+				background-color: #5161AC;
+				color: #fff;
+			}
+
+			a {
+				color: #e86b0d;
+				text-decoration: none;
+			}
+
+			a:hover {
+				text-decoration: underline;
+			}
+
+			p {
+				margin: 0 0 25px;
+				padding: 0;
+			}
+
+			ol,
+			ul {
+				margin: 0;
+				padding: 0;
+			}
+
+			li {
+				list-style-type: none;
+			}
+
+			b,
+			strong {
+				font-weight: 700;
+			}
+
+			blockquote,
+			cite,
+			em,
+			i {
+				font-style: italic;
+			}
+
+			blockquote {
+				margin: 40px;
+			}
+
+			blockquote::before {
+				content: "\201C";
+				display: block;
+				font-size: 30px;
+				height: 0;
+				left: -20px;
+				position: relative;
+				top: -10px;
+			}
+
+
+			/* Headings
+			--------------------------------------------- */
+
+			h1,
+			h2, 
+			h3, 
+			h4, 
+			h5, 
+			h6 {
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 700;
+				margin: 0;
+				-webkit-font-smoothing: antialiased;
+			}
+
+			h1 {
+				font-size: 36px;
+				line-height: 1.25;
+				margin: 0 0 40px;
+			}
+
+			.subtitle {
+				font-size: 18px;
+			}
+
+			h2 {
+				font-size: 30px;
+				color: #e86b0d;
+				margin: 0 0 20px;
+			}
+
+			h3 {
+				font-size: 24px;
+				font-family: 'Open Sans', sans-serif;
+			}
+
+			h4 {
+				font-size: 20px;
+				color: #5161ac;
+			}
+
+			h5 {
+				font-size: 18px;
+				text-transform: uppercase;
+				font-size: 12px;
+			}
+
+			h6 {
+				font-size: 18px;
+				text-transform: uppercase;
+				font-size: 12px;
+				color: #e86b0d;
+			}
+
+			/* Objects
+			--------------------------------------------- */
+
+			embed,
+			iframe,
+			img,
+			object,
+			video {
+				max-width: 100%;
+			}
+
+			img {
+				height: auto;
+			}
+
+			/* Lists
+			--------------------------------------------- */
+
+			ol,
+			ul {
+				margin-bottom: 28px;
+				margin-left: 40px;
+			}
+
+			ol > li {
+				list-style-type: decimal;
+			}
+
+			ul > li {
+				list-style-type: disc;
+			}
+
+			ol ol,
+			ul ul,
+			ol ul,
+			ul ol {
+				margin-bottom: 0;
+			}
+
+
+			/* Alerts
+			--------------------------------------------- */
+
+			.red {
+				color: red;
+			}
+
+
+			/* Structure and Layout
+			---------------------------------------------------------------------------------------------------- */
+
+			/* Site Containers
+			--------------------------------------------- */
+
+			.site-container {
+				background-color: #fff;
+			}
+
+			.site-inner {
+				padding: 60px 10%;
+			}
+
+			/* # Media Queries
+			---------------------------------------------------------------------------------------------------- */
+
+			@media only screen and (max-width: 1200px) {
+
+				.site-inner,
+				.wrap {
+					max-width: 960px;
+				}
+
+				.content-sidebar-sidebar .content-sidebar-wrap,
+				.sidebar-content-sidebar .content-sidebar-wrap,
+				.sidebar-sidebar-content .content-sidebar-wrap {
+					width: 740px;
+				}
+
+				.content,
+				.site-header .widget-area {
+					width: 620px;
+				}
+
+				.sidebar-content-sidebar .content,
+				.sidebar-sidebar-content .content,
+				.content-sidebar-sidebar .content {
+					width: 400px;
+				}
+
+				.footer-widgets-1,
+				.footer-widgets-2,
+				.footer-widgets-3,
+				.sidebar-primary,
+				.title-area {
+					width: 300px;
+				}
+
+				.footer-widgets-1 {
+					margin-right: 30px;
+				}
+
+			}
+
+			@media only screen and (max-width: 960px) {
+
+				.site-inner,
+				.wrap {
+					max-width: 800px;
+				}
+
+				.content,
+				.content-sidebar-sidebar .content,
+				.content-sidebar-sidebar .content-sidebar-wrap,
+				.footer-widgets-1,
+				.footer-widgets-2,
+				.footer-widgets-3,
+				.sidebar-content-sidebar .content,
+				.sidebar-content-sidebar .content-sidebar-wrap,
+				.sidebar-primary,
+				.sidebar-secondary,
+				.sidebar-sidebar-content .content,
+				.sidebar-sidebar-content .content-sidebar-wrap,
+				.site-header .widget-area,
+				.title-area {
+					width: 100%;
+				}
+
+				.site-header .wrap {
+					padding: 20px 5%;
+				}
+
+				.header-image .title-area {
+					background-position: center top;
+				}
+
+				.genesis-nav-menu li,
+				.site-header ul.genesis-nav-menu,
+				.site-header .search-form {
+					float: none;
+				}
+
+				.genesis-nav-menu,
+				.site-description,
+				.site-header .title-area,
+				.site-header .search-form,
+				.site-title {
+					text-align: center;
+				}
+
+				.genesis-nav-menu a,
+				.genesis-nav-menu > .first > a,
+				.genesis-nav-menu > .last > a {
+					padding: 20px 16px;
+				}
+
+				.site-header .search-form {
+					margin: 16px auto;
+				}
+
+				.genesis-nav-menu li.right {
+					display: none;
+				}
+
+				.footer-widgets-1 {
+					margin-right: 0;
+				}
+
+			}
+
+			@media only screen and (max-width: 800px) {
+
+				body {
+					background-color: #fff;
+					font-size: 16px;
+				}
+
+				.site-inner,
+				.wrap {
+					padding-left: 5%;
+					padding-right: 5%;
+				}
+
+				.archive-description,
+				.author-box,
+				.comment-respond,
+				.entry,
+				.entry-comments,
+				.entry-pings,
+				.sidebar .widget,
+				.site-header {
+					padding: 0;
+				}
+
+				.archive-pagination li a {
+					margin-bottom: 4px;
+				}
+
+				.five-sixths,
+				.four-sixths,
+				.one-fourth,
+				.one-half,
+				.one-sixth,
+				.one-third,
+				.three-fourths,
+				.three-sixths,
+				.two-fourths,
+				.two-sixths,
+				.two-thirds {
+					margin: 0;
+					width: 100%;
+				}
+
+				.sidebar .widget.enews-widget {
+					padding: 40px;
+				}
+
+			}
+
+			-->
+		</style>
+	</head>
+
+	<body class="lesson lesson-one">
+		<div class="site-header"> </div>
+		<div class="site-container">
+			<div class="site-inner">
+				<p><span class="red"><strong>DISCLAIMER: This hasn’t been edited or reviewed!!! It will be updated with finalized content as soon as it is reviewed.</strong></span></p>
+				<h1>Rising Up Together with New Eyes: An Introduction to the Gospel of Mark<br>
+					<span class="subtitle">Getting Ready Lesson One</span></h1>
+				<h2>Leader Materials</h2>
+				<h3>Learning Objectives</h3>
+					<ol>
+						<li>Participants will develop an understanding of the key theological themes in the Gospel of Mark.</li>
+						<li>Participants will be able to use these themes as lenses for seeing how the good news of Jesus Christ is breaking into their lives and setting them free.</li>
+						<li>Participants will value seeing their world in a new way in which the first are last and the last are first.</li>
+					</ol>
+				<h3>Overview</h3>
+					<p>The planning team for the 2015 ELCA Youth Gathering has chosen the Gospel of Mark to be the theme text for these Getting Ready Materials. Our desire is that the entire Gospel (as opposed to only certain verses) might confront us as the beginning of the good news of Jesus Christ (<a href="http://bible.oremus.org/?ql=284890287" target="_blank">Mark 1:1</a>). Therefore, this first lesson in the 2015 Getting Ready Materials will introduce some of the main theological themes (see below) that emerge from the entirety of Mark’s Gospel with the hope of building upon these themes throughout the Getting Ready Materials.</p>
+				<h3>Background Material</h3>
+					<p>The Gospel of Mark is considered by many scholars to be the oldest of the four Gospels in the New Testament. It was most likely written around 70 A.D. right around the failed revolt against Rome and the subsequent destruction of the temple. The people of Israel as well as the followers of Jesus were thrown into chaos and were searching for new ways remain organized in the midst of this post-revolt chaos including . . .</p>
+						<ul>
+							<li>Working to ensure careful teaching and practice of Jewish law in one’s daily life.</li>
+							<li>Finding new ways to preserve the purity codes and rituals of the temple.</li>
+							<li>Seeking the ascetic or spiritual life of living in community in the desert and partaking in certain spiritual practices such as fasting, not owning anything, and daily immersion (baptism).</li>
+							<li>Organizing for political autonomy through violent rebellion against the Roman Empire and any other oppressor.</li>
+						</ul>
+					<p>Mark’s Gospel tells the story of Jesus’ public ministry in this chaotic unrest. Mark makes Jesus’ identity illusive, as if to make the point that Jesus does not quite fit cleanly into any of these proposals above. Even Jesus’ followers spend most of the their time in Mark’s Gospel trying to figure out how Jesus fits into this milieu. Mark was written with an intense sense of urgency for this audience of followers of Jesus who were anxious and uncertain about the future in a world where Roman power seemed undisputed but communities of Christians expected and hoped for God’s just victory and God’s righteous deliverance of God’s peoples. Mark’s audience was eagerly awaiting the return of Jesus and was beginning to wonder why it had not already happened. They were anxious and their future uncertain; such tension and anxiety are all too familiar to the people of Detroit. It is into this context that Mark’s Gospel is thrown as the beginning of the good news of Jesus Christ.</p>
+
+					<p>Biblical scholars have identified some key theological themes in the Gospel of Mark. They are themes that provide Mark’s audience with good news and hope in the midst of their despair. In short, these themes help us see the kingdom of God in a particular way where the least become the greatest and vice versa.</p>
+						<ol>
+							<li><strong>Jesus’ Identity:</strong> There is a hope that Jesus, as the messiah, will be a great and mighty political leader who will bring about Israel’s independence once and for all. Many also see him as a powerful miracle worker. But Mark challenges these views of Jesus. Instead, Jesus is the Son of God who has come to suffer. Jesus’ identity cannot be known until after his death.</li>
+							<li><strong>Discipleship:</strong> If Jesus is the Son of God who has come to suffer, then you can easily imagine how Mark portrays the life of discipleship. Mark’s Gospel makes it clear that following Jesus and recognizing his identity are intertwined. We come to know who Jesus truly is by following him, yet we can’t truly follow him until we know who he truly is. Jesus’ disciples never fully grasp either of these things in Mark’s Gospel, yet God keeps giving them second and third and fourth chances to follow and discover, even right up until the end of the Gospel.</li>
+							<li><strong>Kingdom of God:</strong> When we view the world through Mark’s lenses of Jesus and Discipleship, we begin to see the world in new ways. God’s reign is not seen in power, as the world knows it. The wealthy and healthy and powerful social elites are not signs of or ambassadors for God’s kingdom. Rather, the Kingdom of God looks like a child (<a href="http://bible.oremus.org/?ql=284890367" target="_blank">Mark 10:13-16</a>), a widow giving her last coin (<a href="http://bible.oremus.org/?ql=284890334" target="_blank">Mark 12:41-44</a>), a seed dying in good soil (<a href="http://bible.oremus.org/?ql=284890394" target="_blank">Mark 4:1-9</a>), and a woman begging like a dog (<a href="http://bible.oremus.org/?ql=284890421" target="_blank">Mark 7:24-30</a>).</li>
+							<li><strong>End as Beginning:</strong> Just as we start to fear that the disciples (and possibly we too!) will never fully understand Jesus or Discipleship, Mark’s Gospel culminates in an ending that is really only the beginning. Most of the scholarship on Mark’s Gospel will claim <a href="http://bible.oremus.org/?ql=284890448" target="_blank">Mark 16:8a</a> as the original ending and the rest as several alternate endings added later on. As you can see, the Gospel doesn’t end really. The disciples are left with yet another “second chance” to follow Jesus. The beginning of the good news of Jesus Christ doesn’t end but continues with the disciples (you and me!) continuing our journey toward Galilee (or perhaps even Detroit?) where Jesus, the Son of God who has come to suffer, has gone before us into the world’s suffering. The invitation is to follow Jesus into such suffering and compassion and see the radical kingdom of God emerging in the most unexpected places!</li>
+						</ol>
+					<p>This lesson will introduce your group to these four important themes in Mark’s Gospel. These themes will help us construct a framework we will use to explore other issues as we work through these Getting Ready Materials and as we Rise Up Together.</p>
+				<h3>Preparation</h3>
+					<p>The lessons in the Getting Ready Materials are not the type of lessons that allow you to “grab and go”. You cannot print these off and run into your group’s meeting. They will require you to spend some time preparing to lead them. Please follow these steps in preparing to lead this lesson.</p>
+						<ol>
+							<li>Read over the lesson thoroughly, looking up and reading all the Bible verses that are used. Consider the length of the lesson and the time you have available with your group. You might want to add to or subtract from the lesson provided.</li>
+							<li>Make the lesson work for your group. Every group is different, and it is impossible to write one lesson that will work for every group. Please feel free to rework this lesson to fit your needs.</li>
+							<li>Read the entire Gospel of Mark. It is the shortest of the four gospels. And then read it again. What surprised you as you read? What inspires you? What questions do you still have?</li>
+							<li>Consult some of the Extra Resources listed below as you explore these questions.</li>
+							<li>Make sure each participant has access to a Bible.</li>
+							<li>Print out a copy of the Kingdom Specs handout for each participant.</li>
+							<li>Have pens, pencils, crayons and/or markers available for use with the Kingdom Specs handout.</li>
+							<li>Have a chalkboard, whiteboard, or a large easel pad and marker available.</li>
+							<li>Consider having all the Bible verses you will assign printed out in advance (just the chapter and verse(s)). This allows you to simply pass out slips of paper when assigning verses which makes it easier for participants to remember which chapter and verse he or she is supposed to look up.</li>
+							<li>Go over the lesson one more time imagining how the lesson might go and how you might transition between each activity in the lesson.</li>
+							<li>Pray that God’s spirit empowers you and moves through you and your group as you engage this lesson. Ask for “new eyes” to see Jesus, Discipleship and God’s Kingdom in new ways.</li>
+						</ol>
+				<h3>Extra Resources</h3>
+					<p>Here are some extra resources that you and your group may wish to use.</p>
+						<ol>
+							<li><a href="http://www.selectlearning.org/store/all/beginning-good-newsa-live-performance-mark%C3%A3%C2%A2%C3%A2%E2%80%9A%C2%AC%C3%A2%E2%80%9E%C2%A2s-gospel" target="_blank">The Beginning of the Good News: A Live Performance of Mark's Gospel</a> by Dr. Philip L. Ruge-Jones - The first Christians heard the stories about Jesus; they didn't read them. This DVD, filmed live at the Lay School of Ministry in the Northwest Synod of Wisconsin, allows 21st century Christians to experience the gospel just as the early Christians would have: in performance. The performance takes a little over 2 hours.</li>
+							<li><a href="http://www.enterthebible.org/newtestament.aspx?rid=3" target="_blank">Enter the Bible: The Gospel of Mark</a> by Paul Berge - This is an on-line resource that offers brief written introductions, videos, works of art, etc. that all help you better understand Mark’s gospel, its context and its theological significance. This is a free resource made available by Luther Seminary.</li>
+							<li><a href="https://www.churchpublishing.org/products/index.cfm?fuseaction=productDetail&amp;productID=392" target="_blank">Marked</a> by Steve Ross - This is a compelling retelling of Mark’s Gospel as a graphic novel. It is edgy and dark and will give you a new perspective on this story.</li>
+						</ol>
+					<p>The following commentaries were all consulted in the creation of this lesson and are very worth reading. You might have some of these in your church library.</p>
+						<ol>
+							<li><a href="http://www.wjkbooks.com/Products/0664234348/mark.aspx" target="_blank">Mark</a> by Lamar Williamson, Jr. - This is part of the Interpretation series and was used in the creation of this lesson. You will learn a lot even from just reading the introduction to this commentary.</li>
+							<li><a href="http://store.fortresspress.com/store/product/2248/Fortress-Introduction-to-the-Gospels" target="_blank">Fortress Introduction to the Gospels</a> by Mark Allan Powell - This book is a great introduction to all four gospels. You would benefit from reading Dr. Powell’s chapter on the Gospel of Mark.</li>
+							<li><a href="http://www.amazon.com/Mark-Texts-Contexts-Nicole-Duran/dp/0800659988" target="_blank">Mark</a> edited by Nicole Wilkinson Duran, Teresa Okure, and Daniel M. Patte - This is part of the Texts @ Context series published by Fortress Press. It offers rich interpretations of Mark’ Gospel from a variety of cultural and ethnic perspectives by scholars from around the world.</li>
+							<li><a href="http://store.fortresspress.com/store/product/2456/True-to-Our-Native-Land-An-African-American-New-Testament-Commentary" target="_blank">True to Our Native Land: An African American New Testament Commentary</a> edited by Brian K. Blount - This valuable resource offers biblical commentary and interpretation grounded African American experience and concern.</li>
+						</ol>
+				<h2>Introduction (5 minutes)</h2>
+					<ol>
+						<li><strong>Ritual:</strong> Begin your time together in a way that is meaningful for your group. Maybe you have a song you like to sing together, or a prayer you like to say.</li>
+						<li><strong>Goals:</strong> Tell the group that today’s lesson will introduce them to the Gospel of Mark. Mark’s Gospel changes the way we see the world and God’s work in the world. In a sense, Mark is creating a new pair of glasses that will help us view God’s world in new ways. (Pass out the “Kingdom Specs” handout.) These glasses are made up of two lenses. One lens consists of a particular understanding of Jesus. The other lens consists of a particular understanding of discipleship. Once we get these lenses set up correctly, then we begin to see God’s world in new ways. (If you can, try to connect this back to some of the stories they shared in “Getting Started” above.)</li>
+					</ol>
+				<h2>First Lens: Who is Jesus? (30 minutes)</h2>
+				<h3>Messianic Secret</h3>
+				<ol>
+					<li><strong>Teach:</strong> Tell the group that Mark contains something called the “Messianic Secret”; it is as if Jesus doesn’t really want people to know who he is.</li>
+					<li><strong>Text:</strong> Look at some examples of the messianic secret. Divide the following readings up evenly among your group. Ask them to look up their reading, read it to themselves, and then be ready to report back to the group about what is happening.
+						<ol>
+							<li><a href="http://bible.oremus.org/?ql=284822675" target="_blank">Mark 1:32-34</a></li>
+							<li><a href="http://bible.oremus.org/?ql=284822699" target="_blank">Mark 5:35-43</a></li>
+							<li><a href="http://bible.oremus.org/?ql=284822725" target="_blank">Mark 7:32-36</a></li>
+							<li><a href="http://bible.oremus.org/?ql=284822615" target="_blank">Mark 8:27-30</a></li>
+							<li><a href="http://bible.oremus.org/?ql=284822644" target="_blank">Mark 9:2-9</a></li>
+						</ol>
+					</li>
+					<li><strong>Process:</strong> Have one reader of each text quickly say what is happening in their text.</li>
+					<li><strong>Discuss:</strong> Ask the group why they think Jesus would want to keep his identity secret? Write down some of their ideas on the board.</li>
+					<li><strong>Teach:</strong> Tell the group that many biblical scholars agree that Mark’s author is doing this in order to make a point. Mark’s author wants the reader to see Jesus in a new way, not as just a miracle worker or a teacher. Now we’ll look at the key point Mark wants to make about Jesus.</li>
+				</ol>
+				<h3>Christ’s Identity Revealed on the Cross</h3>
+					<ol>
+						<li><strong>Text:</strong> Assign one of the following verses (below) to each person in your group. Have them read their verse and look for (1) the term used to describe Jesus and (2) who is making this claim. Allow them time to look up the verse, read it and find their answers. Have someone share what was found in each of the verses. Write their answers out on the board. Use the table below to help you.
+							<ul>
+								<li><a href="http://bible.oremus.org/?ql=284823268" target="_blank">Mark 1:1</a>: Jesus is Son of God; Person making this claim is the Narrator</li>
+								<li><a href="http://bible.oremus.org/?ql=284823384" target="_blank">Mark 1:11</a>: Jesus is Beloved Son of God; Person making this claim is God/ Voice from Heaven</li>
+								<li><a href="http://bible.oremus.org/?ql=284823440" target="_blank">Mark 3:11</a>: Jesus is Son of God; Person making this claim are Unclean Spirits</li>
+								<li><a href="http://bible.oremus.org/?ql=284823464" target="_blank">Mark 15:39</a>: Jesus is God’s Son; Person making this claim is the Roman Centurion</li>
+							</ul>
+						</li>
+						<li><strong>Process:</strong> Ask the group, “Who is the only person to name Jesus as the Son of God?” (The Roman Centurion). Ask the group, “And when did this happen?” (After Jesus dies).</li>
+						<li><strong>Teach:</strong> The Roman centurion is the only human being in this story who understands who Jesus truly is and this isn’t until after Jesus’ death. Mark is telling us that we will only truly understand Jesus through the cross as the Son of God who came to suffer. Even Jesus’ disciples are unable to truly see who Jesus is.</li>
+					</ol>
+				<h3>Clueless Disciples</h3>
+					<ol>
+						<li><strong>Text:</strong> Assign every participant to one of the following sections of Mark. Have them read it silently to themselves and be prepared to summarize it to the group. As the students are reading, write the section verses (left-hand column) on the board in front of the group.
+							<ul>
+								<li>Section Description
+									<ol>
+										<li><a href="http://bible.oremus.org/?ql=284822787" target="_blank">Mark 8:22-26</a> First bookend – Jesus heals a blind man</li>
+										<li><a href="http://bible.oremus.org/?ql=284822814" target="_blank">Mark 8:27-33</a> Prediction of death #1 and confusion</li>
+										<li><a href="http://bible.oremus.org/?ql=284822838" target="_blank">Mark 9:30-32</a> Prediction of death #2 and confusion</li>
+										<li><a href="http://bible.oremus.org/?ql=284822861" target="_blank">Mark 10:32-34</a> Prediction of death #3</li>
+										<li><a href="http://bible.oremus.org/?ql=284822889" target="_blank">Mark 10:46-52</a> Second bookend – Jesus heals a blind man</li>
+									</ol>
+								</li>
+							</ul>
+						</li>
+						<li><strong>Process:</strong> Have those who read the bookends (<a href="http://bible.oremus.org/?ql=284822787" target="_blank">Mark 8:22-26</a> and <a href="http://bible.oremus.org/?ql=284822889" target="_blank">Mark 10:46-52</a>) summarize their sections first and write down what they say on the board coinciding with the verse (as seen in the table above).</li>
+						<li><strong>Teach:</strong> Tell the group that these “bookends” are a literary device or tool the author uses to bracket, or set off, a section of text in order to make a specific point. Let’s see if we can figure out what the point is.</li>
+						<li><strong>Process:</strong> Have those who read the predictions (<a href="http://bible.oremus.org/?ql=284822814" target="_blank">Mark 8:27-33</a>, <a href="http://bible.oremus.org/?ql=284822838" target="_blank">Mark 9:30-32</a>, and <a href="http://bible.oremus.org/?ql=284822861" target="_blank">Mark 10:32-34</a>) summarize their sections. Write down what they say on the board coinciding with the verse (as seen in the table above).</li>
+						<li><strong>Discuss:</strong> Ask the group what they think the point was that Mark is trying to make in this section. Help them “see” that Mark is essentially saying that the disciples are clueless or confused and cannot truly see who Jesus is.</li>
+						<li><strong>Teach:</strong> So, the first lens Mark wants us to use to see Christ’s good news breaking into the world is the lens of Jesus as the Son of God who came to suffer with and for us. Take a moment and draw or write something inside the “Jesus” lens that will help you remember this.</li>
+					</ol>
+				<h2>Second Lens: What is Discipleship? (25 minutes)</h2>
+					<ol>
+						<li><strong>Teach:</strong> Tell the group that the second lens Mark wants us to view the world through is the lens of discipleship. So lets look at how Mark describes discipleship.</li>
+						<li><strong>Text:</strong> Assign every student to one of the following verses. Have them read their verses silently to themselves and answer this question - How do people respond to Jesus when they encounter him?
+							<ul>
+								<li>Verse(s) Summary
+									<ol>
+										<li><a href="http://bible.oremus.org/?ql=284822916" target="_blank">Mark 1:16-20</a> Disciples leave their nets to follow Jesus</li>
+										<li><a href="http://bible.oremus.org/?ql=284822941" target="_blank">Mark 2:13-17</a> Tax collectors and sinners follow Jesus</li>
+										<li><a href="http://bible.oremus.org/?ql=284822963" target="_blank">Mark 3:7-8</a> Multitudes follow him</li>
+									</ol>
+								</li>
+							</ul>
+						</li>
+						<li><strong>Process:</strong> Have participants share how the people respond to Jesus in their text. Ask the group what they think it means to be a disciple. (Follow Jesus)</li>
+						<li><strong>Teach:</strong> Jesus gives us more insight into what this means in the following verses. All of these are taking place between the two bookends of the healing of the blind men we talked about earlier. Keep that in mind. Again, the point is that the disciples don’t fully know what it means to follow Jesus until this section.</li>
+						<li><strong>Text:</strong> Read the following verses to the group. Ask them to listen for what it means to follow Jesus.
+							<ul>
+								<li>Verse(s) Summary
+									<ol>
+										<li><a href="http://bible.oremus.org/?ql=284822988" target="_blank">Mark 8:34-35</a> Deny yourself and take up your cross.</li>
+										<li><a href="http://bible.oremus.org/?ql=284823009" target="_blank">Mark 10:21-22</a> Sell everything, give to the poor then follow me</li>
+									</ol>
+								</li>
+							</ul>
+						</li>
+						<li><strong>Discuss:</strong> How does Jesus describe what it means to follow him in these verses?</li>
+						<li><strong>Teach:</strong> After Jesus describes what it means to follow him there are no more mentions of people following Jesus. It only mentions who used to follow him. Summarize these for your participants.
+							<ul>
+								<li><a href="http://bible.oremus.org/?ql=284823042" target="_blank">Mark 14:51-52</a> a young man was following Jesus but the runs off at his arrest</li>
+								<li><a href="http://bible.oremus.org/?ql=284823146" target="_blank">Mark 14:53-72</a> Peter is following him “at a distance” and then denies Jesus 3 times</li>
+								<li><a href="http://bible.oremus.org/?ql=284823171" target="_blank">Mark 15:40-41</a> women at Jesus’ crucifixion were ones who “used to follow him”</li>
+							</ul>
+						</li>
+						<li><strong>Discuss:</strong> What point do you think Mark is trying to make here? Help your group understand that, according to Mark, we seem to follow Jesus until we know what it means to follow Jesus (take up our cross, surrender everything), then the following seems to stop.</li>
+						<li><strong>Teach:</strong> So, the second lens Mark wants us to use to see Christ’s good news breaking into the world is the lens of Discipleship as the call to pick up our crosses and follow Jesus into the world’s suffering. Take a moment and draw or write something inside the “Discipleship” lens that will help you remember this.</li>
+					</ol>
+				<h2>The View: The Kingdom of God (10 minutes)</h2>
+					<ol>
+						<li><strong>Teach:</strong> Tell the group that these two lenses we just developed help us see the beginning of the good news of Jesus Christ in our own world. They help us see what Mark calls the Kingdom of God. In Mark 1:15, Jesus tells us that the Kingdom of God is near.</li>
+						<li><strong>Text:</strong> Split the group in two. Have half read <a href="http://bible.oremus.org/?ql=284823216" target="_blank">Mark 10:13-16</a> and half read <a href="http://bible.oremus.org/?ql=284823241" target="_blank">Mark 10:17-22</a>.</li>
+						<li><strong>Discuss:</strong> Have them describe what the kingdom of God must look like. How is this different than the way our society currently works?</li>
+						<li>So, these lenses (Jesus as Son of God who came to suffer, Discipleship as following Christ into suffering) help us see God’s kingdom in a particular way. Take a moment to draw or write some things around your specs that help you remember this.</li>
+					</ol>
+				<h2>The Good News (10 minutes)</h2>
+					<ol>
+						<li><strong>Teach:</strong> We fail at this just like Jesus’ disciples failed at it. But Mark’s Gospel has one more trick up its sleeve. Remember Mark is the beginning of the good news (<a href="http://bible.oremus.org/?ql=284823268" target="_blank">Mark 1:1</a>); it isn’t the end of it. It is only just beginning. If we look at Mark’s original ending, we get a peek at how it continues.</li>
+						<li><strong>Text:</strong> Have your whole group look at Mark’s original ending (<a href="http://bible.oremus.org/?ql=284823291" target="_blank">Mark 16: 1-8</a>) together.</li>
+						<li><strong>Teach:</strong> Remind the group that the disciples could not “see” who Jesus really was and could not understand what it meant to follow Jesus and, in fact, they stopped following him when the going go tough. But look at verse 7. The disciples are given another chance to “follow” when they are told that Jesus has gone to Galilee before them. AND they are given another chance to “see” Jesus. In fact, they are told they will see him.</li>
+						<li><strong>Discussion:</strong> How is this good news for the disciples in this story? How is this good news for us today?</li>
+					</ol>
+				<h2>Final Five (5 minutes)</h2>
+					<ol>
+						<li>As a closing prayer, stand in a circle and hold hands. Ask each person to share they think Jesus is inviting them to follow him on a daily basis.</li>
+						<li>Consider hanging your Kingdom Specs around your church building in places where your participants and the rest of the congregation will see them throughout the weeks to come.</li>
+					</ol>
+				<h2>Social Media</h2>
+				<p>After the lesson, take some photos of your Kingdom Specs and post them on the ELCA Youth Gathering Facebook page (<a href="https://www.facebook.com/youthgathering" target="_blank">https://www.facebook.com/youthgathering</a>) or share them in this app using the icon titled, "Share Your Photos from Lesson One".</p>
+				<h2>About the Author</h2>
+				<p>This month’s lesson has been written by Jeremy Myers. Jeremy teaches in the Religion Department at Augsburg College in Minneapolis, MN where he oversees the college’s <a href="http://www.augsburg.edu/yfm/" target="_blank">Youth and Family Ministry degree program</a>. He is especially grateful to Dr. Eric Barreto from Luther Seminary for his expert help on this lesson.</p>
+				<div class="site-footer"> </div>
+			</div> <!-- end site-container -->
+		</div> <!-- end site-inner -->
+	</body>
+</html>
